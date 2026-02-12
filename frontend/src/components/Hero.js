@@ -18,8 +18,8 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="w-full h-screen relative flex items-center justify-center overflow-hidden px-4 md:px-10 py-5">
-       <div className="relative w-full h-[85vh] rounded-[40px] overflow-hidden shadow-2xl flex flex-col justify-center">
+    <div className="w-full h-screen relative flex flex-col items-center justify-between overflow-hidden px-4 md:px-10">
+       <div className="relative w-full h-[88vh] top-0 rounded-[30px] overflow-hidden shadow-2xl flex flex-col justify-center">
         
         {/* Background Images with Fade Transition */}
         <AnimatePresence mode="wait">
