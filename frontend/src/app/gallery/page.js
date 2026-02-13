@@ -69,7 +69,7 @@ export default function Gallery() {
     <div className="min-h-screen bg-white flex flex-col ">
       {/* Navigation */}
       <Header activeLink="gallery" />
-      <section className="relative inset-0 mx-3 sm:mx-4 md:mx-10  rounded-[30px] overflow-hidden overflow-y-auto lg:overflow-y-hidden">
+      <section className="relative inset-0 mb-5 mx-3 sm:mx-4 md:mx-10  rounded-[30px] overflow-hidden overflow-y-auto lg:overflow-y-hidden">
         {/* Blurred Background - Full Screen */}
         <motion.div
           key={selectedImage.id + "-bg"}
