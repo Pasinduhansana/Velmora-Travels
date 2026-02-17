@@ -2,7 +2,7 @@ const galleryImages = [
   // BEACHES
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1589330694653-ded6df03f754?w=1200&q=80",
+    src: "https://images.unsplash.com/photo-1649856092355-eee498b1d0f2?q=80&w=1200",
     title: "Mirissa Beach",
     category: "Beach",
     description:

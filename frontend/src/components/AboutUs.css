@@ -1,0 +1,153 @@
+.about-us-rectangle1 {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    aspect-ratio: 1;
+    background: radial-gradient(circle 50px at top left, #0000 98%, #ffffff) top left;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 40px;
+    aspect-ratio: 1;
+    background: radial-gradient(circle 40px at top left, #0000 98%, #ffffff) top left;
+  }
+
+  &::after {
+    top: -40px;
+    right: 0px;
+  }
+  &::before {
+    bottom: 0;
+    left: -50px;
+  }
+}
+
+.about-us-rectangle2 {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    aspect-ratio: 1;
+    background: radial-gradient(circle 50px at top left, #0000 98%, #f3f4f6) top left;
+    top: 30px;
+    left: 190px;
+  }
+}
+.aboutus-rec1 {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    aspect-ratio: 1;
+    background: radial-gradient(circle 50px at top left, #0000 98%, rgb(255, 255, 255)) top left;
+    bottom: -50px;
+    right: 0;
+    transform: rotate(270deg);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    aspect-ratio: 1;
+    background: radial-gradient(circle 50px at top left, #0000 98%, rgb(255, 255, 255)) top left;
+    top: 0;
+    left: -50px;
+    transform: rotate(270deg);
+  }
+}
+
+.aboutus-rec2 {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    aspect-ratio: 1;
+    background: radial-gradient(circle 50px at top left, #0000 98%, rgb(255, 255, 255)) top left;
+    top: -50px;
+    right: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    aspect-ratio: 1;
+    background: radial-gradient(circle 50px at top left, #0000 98%, rgb(255, 255, 255)) top left;
+    bottom: 0;
+    left: -50px;
+  }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 640px) {
+  .aboutus-rec1 {
+    &::before {
+      width: 30px;
+      background: radial-gradient(circle 30px at top left, #0000 98%, #ffffff) top left;
+      bottom: 0;
+      left: -30px;
+    }
+
+    &::after {
+      width: 30px;
+      background: radial-gradient(circle 30px at top left, #0000 98%, #ffffff) top left;
+      top: -30px;
+      right: 0px;
+    }
+  }
+
+  .aboutus-rec2 {
+    &::before {
+      width: 30px;
+      background: radial-gradient(circle 30px at top left, #0000 98%, rgb(255, 255, 255)) top left;
+      top: -30px;
+      right: 0;
+    }
+
+    &::after {
+      width: 30px;
+      background: radial-gradient(circle 30px at top left, #0000 98%, rgb(255, 255, 255)) top left;
+      bottom: 0;
+      left: -30px;
+    }
+  }
+}
+
+/* Tablet Responsive Styles */
+@media (min-width: 640px) and (max-width: 1024px) {
+  .aboutus-rec1 {
+    &::before {
+      width: 40px;
+      background: radial-gradient(circle 40px at top left, #0000 98%, #ffffff) top left;
+      bottom: 0;
+      left: -40px;
+    }
+
+    &::after {
+      width: 35px;
+      background: radial-gradient(circle 35px at top left, #0000 98%, #ffffff) top left;
+      top: -35px;
+      right: 0px;
+    }
+  }
+
+  .aboutus-rec2 {
+    &::before {
+      width: 40px;
+      background: radial-gradient(circle 40px at top left, #0000 98%, rgb(255, 255, 255)) top left;
+      top: -40px;
+      right: 0;
+    }
+
+    &::after {
+      width: 40px;
+      background: radial-gradient(circle 40px at top left, #0000 98%, rgb(255, 255, 255)) top left;
+      bottom: 0;
+      left: -40px;
+    }
+  }
+}
