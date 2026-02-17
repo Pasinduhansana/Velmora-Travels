@@ -77,7 +77,7 @@ export default function Hero() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="hidden md:block px-4 ring-0 outline-none py-2 text-xs lg:text-sm font-semibold rounded-full  bg-gradient-to-r from-orange-400 to-orange-600 text-white hover:bg-gray-900"
+                    className="md:block px-4 ring-0 outline-none py-2 text-xs lg:text-sm font-semibold rounded-full  bg-gradient-to-r from-orange-400 to-orange-600 text-white hover:bg-gray-900"
                   >
                     Book a Trip Now
                   </motion.button>
@@ -91,7 +91,7 @@ export default function Hero() {
 
           {/* Glass Card (Bottom Right) */}
           <div className="flex flex-col">
-            <div className="m2 hidden lg:flex absolute right-0 bottom-0 bg-white w-[300px] h-[170px] rounded-tl-[30px] rounded-br-[30px] p-8 flex-col justify-between shadow-lg"></div>
+            <div className="m2 hidden lg:flex absolute right-0 bottom-0 bg-white w-[295px] h-[175px] rounded-tl-[30px] rounded-br-[30px] p-8 flex-col justify-between shadow-lg"></div>
             <div className="m hidden lg:flex absolute right-0 bottom-0 bg-white w-[400px] h-[110px] rounded-tl-[30px] rounded-tr-[30px] rounded-br-[30px] p-8 flex-col justify-between shadow-lg"></div>
           </div>
 
