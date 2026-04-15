@@ -90,7 +90,7 @@ export default function Testimonials() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -14, scale: 0.97 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className="flex-1 max-w-2xl bg-white rounded-[26px] p-7 sm:p-9 shadow-md border border-gray-100"
+                className="flex-1 max-w-2xl bg-white rounded-[26px] mx-5 lg:mx-auto p-7 sm:p-9 shadow-md border border-gray-100"
               >
                 <QuoteCard data={current} />
               </motion.div>

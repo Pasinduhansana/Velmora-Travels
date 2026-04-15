@@ -47,7 +47,7 @@ export default function PageHero({
 
         {/* ── Multi-layer overlay ────────────────────────────── */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/80" />
-        <div className="absolute inset-0 w-[60vw] bg-gradient-to-r from-black/65 to-transparent" />
+        <div className="absolute inset-0 hidden md:block w-[60vw] bg-gradient-to-r from-black/65 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/60 to-transparent" />
 
         {/* ── Decorative floating rings ──────────────────────── */}
