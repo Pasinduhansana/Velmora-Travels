@@ -9,7 +9,7 @@ const AboutUs = () => {
     <div className="about-us min-h-screen ">
       {/* Header text and desciption */}
       <motion.div
-        className="flex flex-col items-center justify-center text-center max-w-4xl -mt-10 mb-10 mx-auto py-8 px-4"
+        className="flex flex-col items-center justify-center text-center max-w-4xl -mt-10 -mb-8 sm:mb-10 mx-auto py-8 px-4"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -22,7 +22,7 @@ const AboutUs = () => {
       </motion.div>
 
       {/* Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 sm:gap-8 lg:gap-0">
         {/* Image Element */}
         <motion.div
           className="relative"
@@ -33,7 +33,7 @@ const AboutUs = () => {
         >
           {/* Rectangle image Element */}
           <motion.div
-            className="absolute w-40 sm:w-48 md:w-60 z-50 h-28 sm:h-32 md:h-40 left-[50%] -translate-x-1/2 lg:translate-x-0 lg:left-[26.8rem] -top-[40px] sm:-top-[60px] lg:-top-[85px] rounded-[30px] sm:rounded-[35px] lg:rounded-[45px] bg-red-100 mx-auto mt-10 overflow-hidden"
+            className="absolute w-40 hidden sm:block sm:w-48 md:w-60 z-50 h-28 sm:h-32 md:h-40 left-[50%] -translate-x-1/2 lg:translate-x-0 lg:left-[26.8rem] -top-[40px] sm:-top-[60px] lg:-top-[85px] rounded-[30px] sm:rounded-[35px] lg:rounded-[45px] bg-red-100 mx-auto mt-10 overflow-hidden"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -47,7 +47,7 @@ const AboutUs = () => {
           </motion.div>
 
           <motion.div
-            className="relative mx-4 sm:mx-8 md:mx-12 lg:mx-20 h-[400px] sm:h-[450px] md:h-[500px] lg:h-full w-auto sm:w-[400px] md:w-[450px] lg:w-[30rem] rounded-[30px] sm:rounded-[40px] lg:rounded-[50px]"
+            className="relative mx-4 hidden sm:block sm:mx-8 md:mx-12 lg:mx-20 h-[400px] sm:h-[450px] md:h-[500px] lg:h-full w-auto sm:w-[400px] md:w-[450px] lg:w-[30rem] rounded-[30px] sm:rounded-[40px] lg:rounded-[50px]"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -63,8 +63,22 @@ const AboutUs = () => {
             <div className="aboutus-rec2 absolute w-40 h-20 sm:w-48 sm:h-24 md:w-52 md:h-28 lg:w-60 lg:h-32 right-0 bottom-0 rounded-tl-[30px] sm:rounded-tl-[40px] lg:rounded-tl-[50px] rounded-br-[30px] sm:rounded-br-[40px] lg:rounded-br-[50px] bg-white"></div>
           </motion.div>
 
+          {/* mobile view image card "/"} */}
           <motion.div
-            className="absolute -z-10 left-20 -top-16 border-[2px] border-dashed   w-full mx-4 sm:mx-8 md:mx-12 lg:mx-20 h-[400px] sm:h-[450px] md:h-[500px] lg:h-full  sm:w-[400px] md:w-[450px] lg:w-[30rem] rounded-[30px] sm:rounded-[40px] lg:rounded-[50px]"
+            className="relative mx-4  block sm:hidden sm:mx-8 md:mx-12 lg:mx-20 h-[400px] sm:h-[450px] md:h-[500px] lg:h-full w-auto sm:w-[400px] md:w-[450px] lg:w-[30rem] rounded-[30px] sm:rounded-[40px] lg:rounded-[50px]"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            style={{
+              backgroundImage: `url(/aboutusimage1.jpg)`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          > </motion.div>
+
+          <motion.div
+            className="absolute -z-10 hidden sm:block sm:left-20 right-0 -top-16 border-[2px] border-dashed  mx-4 sm:mx-8 md:mx-12 lg:mx-20 h-[400px] sm:h-[450px] md:h-[500px] lg:h-full w-[200px]  sm:w-[400px] md:w-[450px] lg:w-[30rem] rounded-[30px] sm:rounded-[40px] lg:rounded-[50px]"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -103,7 +117,7 @@ const AboutUs = () => {
             <div className="about-us-rectangle1 absolute w-32 h-36 bg-white rounded-tl-[60px] right-0 bottom-0"></div>
           </motion.div>
 
-          <div className="w-20 h-64 bg-cover bg-center mb-10" style={{ backgroundImage: "url('/images/about-us.jpg')" }}></div>
+          <div className="hidden sm:block w-20 h-64 bg-cover bg-center mb-10" style={{ backgroundImage: "url('/images/about-us.jpg')" }}></div>
         </motion.div>
 
         {/* About Us Description */}
