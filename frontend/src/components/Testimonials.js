@@ -34,11 +34,11 @@ export default function Testimonials() {
 
   return (
     <section
-      className="bg-gray-50 py-20 sm:py-24 px-4 sm:px-8 md:px-12 lg:px-20 overflow-hidden"
+      className=" bg-gray-50 py-20 sm:py-24 px-4 sm:px-8 md:px-12 lg:px-20 overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div className="mx-auto">
+      <div className="mx-auto max-w-7xl">
         {/* Section heading */}
         <motion.div {...fadeUp(0.05)} className="text-center mb-12 sm:mb-14">
           <span className="inline-flex items-center gap-2 text-[#FFD700] text-[11px] tracking-[4px] uppercase font-semibold">
