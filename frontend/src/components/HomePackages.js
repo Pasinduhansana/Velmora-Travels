@@ -112,11 +112,12 @@ export default function HomePackages() {
   const featured = packages.filter((p) => featuredPackageIds.includes(p.id));
 
   return (
-    <section className="py-20 sm:py-24 lg:py-12 lg:pb-10 px-4 sm:px-8 md:px-12 lg:px-20 bg-white overflow-hidden">
+    <section className="py-10 sm:py-24 lg:py-12 lg:pb-10 px-4 sm:px-8 md:px-12 lg:px-20 bg-white overflow-hidden">
       <div className=" mx-auto">
+        
         {/* Heading */}
-        <motion.div {...fadeUp(0.05)} className="flex flex-col md:flex-row items-start md:items-end justify-between gap-5 mb-12 sm:mb-14">
-          <div>
+        <motion.div {...fadeUp(0.05)} className="flex flex-col md:flex-row items-center md:items-center justify-between gap-5 mb-8 sm:mb-14">
+          <div className="text-center md:text-left">
             <span className="inline-flex items-center gap-2 text-[#FFD700] text-[11px] tracking-[4px] uppercase font-semibold">
               <span className="w-6 h-px bg-[#FFD700]" />
               {featuredPackagesMeta.label}

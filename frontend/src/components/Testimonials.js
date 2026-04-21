@@ -34,7 +34,7 @@ export default function Testimonials() {
 
   return (
     <section
-      className=" bg-gray-50 py-20 sm:py-24 px-4 sm:px-8 md:px-12 lg:px-20 overflow-hidden"
+      className=" bg-gray-50 py-10 sm:py-24 px-4 sm:px-8 md:px-12 lg:px-20 overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
