@@ -31,9 +31,11 @@ const AboutUs = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
+
+          <div className="absolute  block w-full h-full md:scale-75 md:-left-10 lg:scale-75 xl:scale-85 2xl:scale-110 lg:left-0">
           {/* Rectangle image Element */}
           <motion.div
-            className="absolute w-40 hidden sm:block sm:w-48 md:w-60 z-50 h-28 sm:h-32 md:h-40 left-[50%] -translate-x-1/2 lg:translate-x-0 lg:left-[26.8rem] -top-[40px] sm:-top-[60px] lg:-top-[85px] rounded-[30px] sm:rounded-[35px] lg:rounded-[45px] bg-red-100 mx-auto mt-10 overflow-hidden"
+            className="absolute w-40 hidden lg:block sm:w-48 md:w-60 z-50 h-28 sm:h-32 md:h-40 left-[50%] -translate-x-1/2 lg:translate-x-0 lg:left-[26.8rem] -top-[40px] sm:-top-[60px] lg:-top-[85px] rounded-[30px] sm:rounded-[35px] lg:rounded-[45px] bg-red-100 mx-auto mt-10 overflow-hidden"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -57,32 +59,6 @@ const AboutUs = () => {
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
-          >
-            <div className="aboutus-rec1 absolute w-24 h-20 sm:w-28 sm:h-24 md:w-32 md:h-28 lg:w-36 lg:h-32 right-0 top-0 rounded-tr-[30px] sm:rounded-tr-[40px] lg:rounded-tr-[50px] rounded-bl-[30px] sm:rounded-bl-[40px] lg:rounded-bl-[50px] bg-white"></div>
-
-            <div className="aboutus-rec2 absolute w-40 h-20 sm:w-48 sm:h-24 md:w-52 md:h-28 lg:w-60 lg:h-32 right-0 bottom-0 rounded-tl-[30px] sm:rounded-tl-[40px] lg:rounded-tl-[50px] rounded-br-[30px] sm:rounded-br-[40px] lg:rounded-br-[50px] bg-white"></div>
-          </motion.div>
-
-          {/* mobile view image card "/"} */}
-          <motion.div
-            className="relative mx-4  block sm:hidden sm:mx-8 md:mx-12 lg:mx-20 h-[400px] sm:h-[450px] md:h-[500px] lg:h-full w-auto sm:w-[400px] md:w-[450px] lg:w-[30rem] rounded-[30px] sm:rounded-[40px] lg:rounded-[50px]"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            style={{
-              backgroundImage: `url(/aboutusimage1.jpg)`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          > </motion.div>
-
-          <motion.div
-            className="absolute -z-10 hidden sm:block sm:left-20 right-0 -top-16 border-[2px] border-dashed  mx-4 sm:mx-8 md:mx-12 lg:mx-20 h-[400px] sm:h-[450px] md:h-[500px] lg:h-full w-[200px]  sm:w-[400px] md:w-[450px] lg:w-[30rem] rounded-[30px] sm:rounded-[40px] lg:rounded-[50px]"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.3 }}
           >
             <div className="aboutus-rec1 absolute w-24 h-20 sm:w-28 sm:h-24 md:w-32 md:h-28 lg:w-36 lg:h-32 right-0 top-0 rounded-tr-[30px] sm:rounded-tr-[40px] lg:rounded-tr-[50px] rounded-bl-[30px] sm:rounded-bl-[40px] lg:rounded-bl-[50px] bg-white"></div>
 
@@ -117,7 +93,36 @@ const AboutUs = () => {
             <div className="about-us-rectangle1 absolute w-32 h-36 bg-white rounded-tl-[60px] right-0 bottom-0"></div>
           </motion.div>
 
-          <div className="hidden sm:block w-20 h-64 bg-cover bg-center mb-10" style={{ backgroundImage: "url('/images/about-us.jpg')" }}></div>
+        </div>
+
+          {/* mobile view image card "/"} */}
+          <motion.div
+            className="relative mx-4  block lg:hidden sm:mx-8 md:mx-12 lg:mx-20 h-[400px] sm:h-[450px] md:h-[500px] lg:h-full w-auto sm:w-[400px] md:w-[450px] lg:w-[30rem] rounded-[30px] sm:rounded-[40px] lg:rounded-[50px]"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            style={{
+              backgroundImage: `url(/aboutusimage1.jpg)`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          > </motion.div>
+
+          <motion.div
+            className="absolute -z-10 hidden md:block sm:left-20 right-0 -top-16 border-[2px] border-dashed  mx-4 sm:mx-8 md:mx-12 lg:mx-20 h-[400px] sm:h-[450px] md:h-[500px] lg:h-full w-[200px]  sm:w-[400px] md:w-[450px] lg:w-[30rem] rounded-[30px] sm:rounded-[40px] lg:rounded-[50px]"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+          >
+            <div className="aboutus-rec1 absolute w-24 h-20 sm:w-28 sm:h-24 md:w-32 md:h-28 lg:w-36 lg:h-32 right-0 top-0 rounded-tr-[30px] sm:rounded-tr-[40px] lg:rounded-tr-[50px] rounded-bl-[30px] sm:rounded-bl-[40px] lg:rounded-bl-[50px] bg-white"></div>
+
+            <div className="aboutus-rec2 absolute w-40 h-20 sm:w-48 sm:h-24 md:w-52 md:h-28 lg:w-60 lg:h-32 right-0 bottom-0 rounded-tl-[30px] sm:rounded-tl-[40px] lg:rounded-tl-[50px] rounded-br-[30px] sm:rounded-br-[40px] lg:rounded-br-[50px] bg-white"></div>
+          </motion.div>
+
+
+          <div className="hidden md:block w-20 h-64 bg-cover bg-center mb-10" style={{ backgroundImage: "url('/images/about-us.jpg')" }}></div>
         </motion.div>
 
         {/* About Us Description */}
