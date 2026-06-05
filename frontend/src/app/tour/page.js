@@ -364,7 +364,6 @@ function SriLankaMap({ selected, onToggle, hovered, setHovered }) {
                   <p className="text-gray-500 text-[11px] leading-relaxed line-clamp-2">{dest.description}</p>
                   <div className="flex items-center justify-between mt-2 pt-2 border-t border-gray-100">
                     <span className="text-gray-400 text-[10px]">{dest.nights}n stay</span>
-                    <span className="text-orange-500 font-bold text-[11px]">${dest.pricePerNight}/night</span>
                   </div>
                 </div>
                 {/* Down arrow */}
@@ -487,137 +486,136 @@ function CostEstimatePanel({ selected }) {
 
   return (
     <div className="bg-white rounded-[20px] shadow-sm border border-gray-100 overflow-hidden h-full">
-        <div className="px-5 py-4 border-b border-gray-100">
-          <h3 className="font-bold text-gray-900 text-[15px]">Cost Estimate</h3>
-          <p className="text-gray-400 text-[11px] mt-0.5">All prices in USD · per group</p>
+      <div className="px-5 py-4 border-b border-gray-100">
+        <h3 className="font-bold text-gray-900 text-[15px]">Cost Estimate</h3>
+        <p className="text-gray-400 text-[11px] mt-0.5">All prices in USD · per group</p>
+      </div>
+
+      <div className="px-5 py-4 flex flex-col gap-4">
+        {/* Persons */}
+        <div>
+          <label className="text-gray-600 text-xs font-semibold mb-2 block">Travellers</label>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setPersons((p) => Math.max(1, p - 1))}
+              className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:border-orange-400 hover:text-orange-500 transition-colors"
+            >
+              <FaMinus className="text-[10px]" />
+            </button>
+            <div className="flex-1 text-center">
+              <span className="text-xl font-bold text-gray-900">{persons}</span>
+              <span className="text-gray-400 text-xs ml-1">person{persons !== 1 ? "s" : ""}</span>
+            </div>
+            <button
+              onClick={() => setPersons((p) => Math.min(20, p + 1))}
+              className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:border-orange-400 hover:text-orange-500 transition-colors"
+            >
+              <FaPlus className="text-[10px]" />
+            </button>
+          </div>
         </div>
 
-        <div className="px-5 py-4 flex flex-col gap-4">
-          {/* Persons */}
-          <div>
-            <label className="text-gray-600 text-xs font-semibold mb-2 block">Travellers</label>
-            <div className="flex items-center gap-3">
+        {/* Accommodation tier */}
+        <div>
+          <label className="text-gray-600 text-xs font-semibold mb-2 block">Accommodation</label>
+          <div className="grid grid-cols-2 gap-1.5">
+            {costConfig.accommodationTiers.map((t) => (
               <button
-                onClick={() => setPersons((p) => Math.max(1, p - 1))}
-                className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:border-orange-400 hover:text-orange-500 transition-colors"
+                key={t.id}
+                onClick={() => setTier(t.id)}
+                className={`py-1.5 rounded-[10px] text-[12px] font-semibold transition-all border ${
+                  tier === t.id
+                    ? "bg-gradient-to-r from-orange-400 to-orange-600 text-white border-transparent shadow-sm"
+                    : "bg-gray-50 text-gray-600 border-gray-100 hover:border-orange-200"
+                }`}
               >
-                <FaMinus className="text-[10px]" />
+                {t.label}
               </button>
-              <div className="flex-1 text-center">
-                <span className="text-xl font-bold text-gray-900">{persons}</span>
-                <span className="text-gray-400 text-xs ml-1">person{persons !== 1 ? "s" : ""}</span>
-              </div>
-              <button
-                onClick={() => setPersons((p) => Math.min(20, p + 1))}
-                className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:border-orange-400 hover:text-orange-500 transition-colors"
-              >
-                <FaPlus className="text-[10px]" />
-              </button>
-            </div>
+            ))}
           </div>
-
-          {/* Accommodation tier */}
-          <div>
-            <label className="text-gray-600 text-xs font-semibold mb-2 block">Accommodation</label>
-            <div className="grid grid-cols-2 gap-1.5">
-              {costConfig.accommodationTiers.map((t) => (
-                <button
-                  key={t.id}
-                  onClick={() => setTier(t.id)}
-                  className={`py-1.5 rounded-[10px] text-[12px] font-semibold transition-all border ${
-                    tier === t.id
-                      ? "bg-gradient-to-r from-orange-400 to-orange-600 text-white border-transparent shadow-sm"
-                      : "bg-gray-50 text-gray-600 border-gray-100 hover:border-orange-200"
-                  }`}
-                >
-                  {t.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Meals */}
-          <div>
-            <label className="text-gray-600 text-xs font-semibold mb-2 block">Meals</label>
-            <div className="flex flex-col gap-1.5">
-              {costConfig.mealsTiers.map((m) => (
-                <button
-                  key={m.id}
-                  onClick={() => setMeals(m.id)}
-                  className={`flex items-center justify-between px-3 py-2 rounded-[10px] text-[12px] font-semibold transition-all border ${
-                    meals === m.id
-                      ? "bg-orange-50 text-orange-700 border-orange-200"
-                      : "bg-gray-50 text-gray-600 border-gray-100 hover:border-orange-100"
-                  }`}
-                >
-                  <span className="flex items-center gap-2">
-                    {meals === m.id && <FaCheck className="text-orange-500 text-[10px]" />}
-                    {m.label}
-                  </span>
-                  {m.pricePerDay > 0 && <span className="text-gray-400 font-normal">+${m.pricePerDay}/day</span>}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Divider */}
-          <div className="border-t border-gray-100" />
-
-          {/* Total */}
-          {selected.length > 0 ? (
-            <>
-              <div className="flex items-end justify-between">
-                <div>
-                  <p className="text-gray-400 text-xs">Estimated Total</p>
-                  <p className="text-3xl font-extrabold text-gray-900 tracking-tight mt-0.5">${total.toLocaleString()}</p>
-                  <p className="text-gray-400 text-[11px] mt-0.5">
-                    {totalNights} nights · {persons} person{persons !== 1 ? "s" : ""}
-                  </p>
-                </div>
-                <button
-                  onClick={() => setExpanded((p) => !p)}
-                  className="text-orange-500 text-[11px] font-semibold hover:text-orange-600 transition-colors flex items-center gap-1"
-                >
-                  Breakdown {expanded ? <FaChevronUp className="text-[9px]" /> : <FaChevronDown className="text-[9px]" />}
-                </button>
-              </div>
-
-              <AnimatePresence>
-                {expanded && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.25 }}
-                    className="overflow-hidden"
-                  >
-                    <ul className="bg-gray-50 rounded-[12px] p-3 flex flex-col gap-2">
-                      {breakdown.map((b, i) => (
-                        <li key={i} className="flex justify-between text-[12px]">
-                          <span className="text-gray-500">{b.label}</span>
-                          <span className="font-semibold text-gray-900">${b.value.toLocaleString()}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-
-              <Link href="/contact">
-                <motion.span
-                  tabIndex={-1}
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.97 }}
-                  className="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-gradient-to-r from-orange-400 to-orange-600 text-white text-sm font-semibold shadow-md shadow-orange-200 cursor-pointer"
-                >
-                  Get a Quote <FaArrowRight className="text-[10px]" />
-                </motion.span>
-              </Link>
-            </>
-          ) : (
-            <p className="text-center text-gray-400 text-sm py-2">Add destinations to see your cost estimate.</p>
-          )}
         </div>
+
+        {/* Meals */}
+        <div>
+          <label className="text-gray-600 text-xs font-semibold mb-2 block">Meals</label>
+          <div className="flex flex-col gap-1.5">
+            {costConfig.mealsTiers.map((m) => (
+              <button
+                key={m.id}
+                onClick={() => setMeals(m.id)}
+                className={`flex items-center justify-between px-3 py-2 rounded-[10px] text-[12px] font-semibold transition-all border ${
+                  meals === m.id
+                    ? "bg-orange-50 text-orange-700 border-orange-200"
+                    : "bg-gray-50 text-gray-600 border-gray-100 hover:border-orange-100"
+                }`}
+              >
+                <span className="flex items-center gap-2">
+                  {meals === m.id && <FaCheck className="text-orange-500 text-[10px]" />}
+                  {m.label}
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-gray-100" />
+
+        {/* Total */}
+        {selected.length > 0 ? (
+          <>
+            <div className="flex items-end justify-between">
+              <div>
+                <p className="text-gray-400 text-xs">Estimated Total</p>
+                <p className="text-3xl font-extrabold text-gray-900 tracking-tight mt-0.5">${total.toLocaleString()}</p>
+                <p className="text-gray-400 text-[11px] mt-0.5">
+                  {totalNights} nights · {persons} person{persons !== 1 ? "s" : ""}
+                </p>
+              </div>
+              <button
+                onClick={() => setExpanded((p) => !p)}
+                className="text-orange-500 text-[11px] font-semibold hover:text-orange-600 transition-colors flex items-center gap-1"
+              >
+                Breakdown {expanded ? <FaChevronUp className="text-[9px]" /> : <FaChevronDown className="text-[9px]" />}
+              </button>
+            </div>
+
+            <AnimatePresence>
+              {expanded && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.25 }}
+                  className="overflow-hidden"
+                >
+                  <ul className="bg-gray-50 rounded-[12px] p-3 flex flex-col gap-2">
+                    {breakdown.map((b, i) => (
+                      <li key={i} className="flex justify-between text-[12px]">
+                        <span className="text-gray-500">{b.label}</span>
+                        <span className="font-semibold text-gray-900">${b.value.toLocaleString()}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            <Link href="/contact">
+              <motion.span
+                tabIndex={-1}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-gradient-to-r from-orange-400 to-orange-600 text-white text-sm font-semibold shadow-md shadow-orange-200 cursor-pointer"
+              >
+                Get a Quote <FaArrowRight className="text-[10px]" />
+              </motion.span>
+            </Link>
+          </>
+        ) : (
+          <p className="text-center text-gray-400 text-sm py-2">Add destinations to see your cost estimate.</p>
+        )}
+      </div>
     </div>
   );
 }
@@ -718,9 +716,7 @@ export default function TourPage() {
                     key={r}
                     onClick={() => setActiveRegion(r)}
                     className={`text-[11px] font-semibold px-2.5 py-1 rounded-full transition-all ${
-                      activeRegion === r
-                        ? "bg-gradient-to-r from-orange-400 to-orange-600 text-white"
-                        : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+                      activeRegion === r ? "bg-gradient-to-r from-orange-400 to-orange-600 text-white" : "bg-gray-100 text-gray-500 hover:bg-gray-200"
                     }`}
                   >
                     {r}
@@ -767,17 +763,13 @@ export default function TourPage() {
                       {/* Text */}
                       <div className="flex-1 min-w-0">
                         <p className={`font-semibold text-[13px] truncate ${isSelected ? "text-orange-700" : "text-gray-900"}`}>{dest.name}</p>
-                        <p className="text-gray-400 text-[11px]">
-                          {dest.nights}n · ${dest.pricePerNight}/night
-                        </p>
+                        <p className="text-gray-400 text-[11px]">{dest.nights}n</p>
                       </div>
 
                       {/* Check / number */}
                       <div
                         className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-[11px] font-bold transition-all ${
-                          isSelected
-                            ? "bg-gradient-to-br from-orange-400 to-orange-600 text-white"
-                            : "bg-white border border-gray-200 text-gray-300"
+                          isSelected ? "bg-gradient-to-br from-orange-400 to-orange-600 text-white" : "bg-white border border-gray-200 text-gray-300"
                         }`}
                       >
                         {isSelected ? order : "+"}

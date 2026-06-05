@@ -50,14 +50,13 @@ function FeaturedCard({ pkg, index }) {
           {pkg.category}
         </span>
 
-        {/* Title + price pinned to bottom of image */}
+        {/* Title */}
         <div className="absolute bottom-0 left-0 right-0 px-4 pb-3.5 pt-6">
           <h3 className="text-white font-bold text-[15px] sm:text-[16px] leading-snug tracking-tight drop-shadow">{pkg.title}</h3>
           <div className="flex items-center justify-between mt-1">
             <span className="text-white/80 text-[12px] font-medium flex items-center gap-1.5">
               <FaClock className="text-[10px]" /> {pkg.duration}
             </span>
-            <span className="text-orange-300 font-extrabold text-[13px]">{pkg.price}</span>
           </div>
         </div>
       </div>
@@ -114,7 +113,6 @@ export default function HomePackages() {
   return (
     <section className="py-10 sm:py-24 lg:py-12 lg:pb-10 px-4 sm:px-8 md:px-12 lg:px-20 bg-white overflow-hidden">
       <div className=" mx-auto">
-        
         {/* Heading */}
         <motion.div {...fadeUp(0.05)} className="flex flex-col md:flex-row items-center md:items-center justify-between gap-5 mb-8 sm:mb-14">
           <div className="text-center md:text-left">

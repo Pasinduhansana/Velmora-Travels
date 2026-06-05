@@ -78,7 +78,6 @@ function RelatedCard({ pkg }) {
         </div>
       </div>
       <div className="p-4 flex flex-col gap-3 flex-1">
-        <p className="text-orange-500 font-extrabold text-[15px]">{pkg.price}</p>
         <div className="flex flex-wrap gap-1.5">
           {pkg.destinations.slice(0, 2).map((d, i) => (
             <span
@@ -125,7 +124,6 @@ export default function PackageDetailPage({ params }) {
         subtitle={`${pkg.duration}  ·  ${pkg.groupSize}`}
         breadcrumb={{ home: "Packages", current: pkg.title }}
         stats={[
-          { value: pkg.price.replace("From ", ""), label: "Per Person" },
           { value: pkg.duration.split(" / ")[0], label: "Nights" },
           { value: pkg.groupSize.split(" – ")[1] ?? pkg.groupSize, label: "Max Group" },
         ]}
@@ -168,9 +166,6 @@ export default function PackageDetailPage({ params }) {
               </span>
               <span className="flex items-center gap-1.5 text-gray-500 text-[13px]">
                 <FaUsers className="text-orange-400" /> {pkg.groupSize}
-              </span>
-              <span className="flex items-center gap-1.5 text-orange-500 font-bold text-[15px] ml-auto">
-                <FaTag className="text-[12px]" /> {pkg.price}
               </span>
             </motion.div>
 
@@ -274,7 +269,6 @@ export default function PackageDetailPage({ params }) {
               {/* Card header */}
               <div className="bg-gradient-to-br from-gray-900 to-gray-800 px-6 py-5">
                 <p className="text-white/60 text-[11px] uppercase tracking-widest mb-1">Starting from</p>
-                <p className="text-4xl font-extrabold text-white tracking-tight">{pkg.price.replace("From ", "")}</p>
                 <p className="text-white/50 text-[12px] mt-1">per person · private tour</p>
               </div>
 
