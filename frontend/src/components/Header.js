@@ -74,13 +74,15 @@ export default function Header() {
           {/* RIGHT: Button & Mobile Toggle */}
           <div className="flex items-center space-x-4">
             {/* Desktop Button */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="hidden md:block px-4 py-2 text-xs lg:text-sm font-semibold rounded-full shadow-lg bg-black text-white hover:bg-gray-900"
-            >
-              Book Now
-            </motion.button>
+            <Link href="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="hidden md:block px-4 py-2 text-xs lg:text-sm font-semibold rounded-full shadow-lg bg-black text-white hover:bg-gray-900"
+              >
+                Book Now
+              </motion.button>
+            </Link>
 
             {/* Mobile Hamburger Menu Toggle */}
             <div className="md:hidden flex items-center">
