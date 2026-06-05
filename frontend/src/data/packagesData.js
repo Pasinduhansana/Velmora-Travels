@@ -40,7 +40,6 @@ export const packages = [
     title: "Cultural & Scenic Getaway",
     duration: "3 Nights / 4 Days",
     groupSize: "2 – 8 People",
-    price: "From $420",
     image: "https://images.unsplash.com/photo-1588416936097-41850ab3d86d?q=80&w=800",
     destinations: ["Temple of the Tooth", "Sigiriya Fortress", "Dambulla Caves", "Colombo City"],
     highlights: [
@@ -59,7 +58,6 @@ export const packages = [
     title: "Cultural & Hill Country Tour",
     duration: "5 Nights / 6 Days",
     groupSize: "2 – 6 People",
-    price: "From $680",
     image: "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?q=80&w=800",
     destinations: ["Temple of the Tooth", "Tea Plantations", "Ella Train Ride", "Waterfalls", "Colombo City"],
     highlights: [
@@ -78,7 +76,6 @@ export const packages = [
     title: "Nature & Wildlife Tour",
     duration: "7 Nights / 8 Days",
     groupSize: "2 – 10 People",
-    price: "From $950",
     image: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?q=80&w=800",
     destinations: ["Sigiriya Rock", "Yala Safari", "Mirissa Beach", "Galle Fort"],
     highlights: [
@@ -97,7 +94,6 @@ export const packages = [
     title: "Beach & Coastal Escape",
     duration: "4 Nights / 5 Days",
     groupSize: "2 – 8 People",
-    price: "From $540",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800",
     destinations: ["Bentota Beach", "Hikkaduwa Reef", "Mirissa", "Galle Fort"],
     highlights: [
@@ -116,7 +112,6 @@ export const packages = [
     title: "Complete Sri Lanka Experience",
     duration: "11 Nights / 12 Days",
     groupSize: "2 – 6 People",
-    price: "From $1,450",
     image: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=800",
     destinations: ["Ancient Cities", "Tea Trails", "Yala Safari", "Bentota Water Sports"],
     highlights: [
@@ -135,7 +130,6 @@ export const packages = [
     title: "Sri Lanka Heritage & Scenic Tour",
     duration: "13 Nights / 14 Days",
     groupSize: "2 – 6 People",
-    price: "From $1,850",
     image: "https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3?q=80&w=800",
     destinations: ["Wilpattu Safari", "Ancient Cities", "Sigiriya", "Kandy", "Ella Train", "Galle Beaches"],
     highlights: [

@@ -101,9 +101,6 @@ function PackageCard({ pkg, index }) {
               </span>
             </div>
           </div>
-          <div className="bg-white rounded-[10px] px-3 py-1.5 shadow-lg shrink-0">
-            <span className="text-sm font-extrabold text-gray-900 tracking-tight">{pkg.price}</span>
-          </div>
         </div>
       </div>
 
@@ -114,9 +111,9 @@ function PackageCard({ pkg, index }) {
           {pkg.destinations.slice(0, 3).map((d, i) => (
             <span
               key={i}
-              className="flex items-center gap-1 bg-orange-50 border border-orange-100 text-orange-700 text-[11px] font-medium rounded-full px-2.5 py-0.5"
+              className="flex items-center gap-1 bg-gray-50 border border-orange-100 text-gray-600 text-[11px] font-medium rounded-full px-2.5 py-0.5"
             >
-              <FaMapMarkerAlt className="text-orange-400 text-[9px] shrink-0" />
+              <FaMapMarkerAlt className="text-gray-400 text-[9px] shrink-0" />
               {d}
             </span>
           ))}
@@ -129,7 +126,7 @@ function PackageCard({ pkg, index }) {
         <div>
           <button
             onClick={() => setOpen((p) => !p)}
-            className="flex items-center gap-1.5 text-orange-500 text-[12px] font-semibold hover:text-orange-600 transition-colors group/btn"
+            className="flex items-center gap-1.5 text-gray-700 text-[12px] font-medium hover:text-orange-600 transition-colors group/btn"
           >
             <motion.span animate={{ rotate: open ? 90 : 0 }} transition={{ duration: 0.2 }}>
               <FaChevronDown className="text-[10px]" />
