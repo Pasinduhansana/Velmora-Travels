@@ -6,7 +6,7 @@ import "./AboutUs.css";
 
 const AboutUs = () => {
   return (
-    <div className="about-us min-h-screen py-10 sm:py-24 lg:py-10 mb-16 ">
+    <div className="about-us min-h-screen py-10 sm:py-24 lg:py-10 lg:mb-5">
       {/* Header text and desciption */}
       <motion.div
         className="flex flex-col items-center justify-center text-center max-w-4xl -mt-10 -mb-8 sm:mb-10 lg:mb-16 mx-auto py-8 px-4"
@@ -126,7 +126,7 @@ const AboutUs = () => {
 
         {/* About Us Description */}
         <motion.div
-          className="flex flex-col justify-center text-left px-6 sm:px-8 md:px-10 max-w-4xl mx-auto py-8 sm:py-12 md:py-16 gap-4"
+          className="flex flex-col justify-center text-left px-6 sm:px-8 md:px-20 max-w-4xl mx-auto py-8 sm:py-12 md:py-16 gap-4"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
