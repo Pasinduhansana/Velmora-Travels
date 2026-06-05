@@ -413,7 +413,7 @@ function RoutePanel({ selected, onRemove, onMoveUp, onMoveDown }) {
 
       {selected.length === 0 ? (
         <div className="px-5 py-8 text-center flex-1 flex flex-col items-center justify-center">
-          <FaMapMarkerAlt className="text-gray-200 text-3xl mx-auto mb-2" />
+          <FaMapMarkerAlt className="text-g 0 text-3xl mx-auto mb-2" />
           <p className="text-gray-400 text-sm">Click destinations on the map to start building your route.</p>
         </div>
       ) : (
