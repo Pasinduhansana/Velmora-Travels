@@ -20,8 +20,8 @@ export const footerSections = [
   {
     title: "About Us",
     links: [
-      { name: "Our guides", href: "/aboutus#our-guides" },
-      { name: "Blog", href: "/blog" },
+      { name: "Our guides", href: "/aboutus" },
+      { name: "Gallery", href: "/gallery" },
       { name: "Packages", href: "/packages" },
       { name: "Contact Us", href: "/contact" },
     ],
