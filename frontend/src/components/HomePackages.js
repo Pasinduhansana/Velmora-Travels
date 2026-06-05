@@ -111,7 +111,7 @@ export default function HomePackages() {
   const featured = packages.filter((p) => featuredPackageIds.includes(p.id));
 
   return (
-    <section className="py-10 sm:py-24 lg:py-12 lg:pb-10 px-4 sm:px-8 md:px-12 lg:px-20 bg-white overflow-hidden">
+    <section className="py-10 sm:py-24 lg:py-0 lg:pb-10 px-4 sm:px-8 md:px-12 lg:px-20 bg-white overflow-hidden">
       <div className=" mx-auto">
         {/* Heading */}
         <motion.div {...fadeUp(0.05)} className="flex flex-col md:flex-row items-center md:items-center justify-between gap-5 mb-8 sm:mb-14">
