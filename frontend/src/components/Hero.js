@@ -18,7 +18,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="w-full h-screen relative flex flex-col items-center justify-between overflow-hidden px-4 md:px-10">
+    <div className="w-full h-auto lg:h-screen relative flex flex-col items-center justify-between overflow-hidden px-4 md:px-10">
       <div className="relative w-full h-[88vh] top-0 rounded-[30px] overflow-hidden  flex flex-col justify-center">
         {/* Background Images with Fade Transition */}
         <AnimatePresence mode="sync" initial={false}>
@@ -101,7 +101,7 @@ export default function Hero() {
           <div className="hidden lg:flex justify-center border-none items-end -gap-10 flex-col absolute right-0 bottom-0 ">
             <div className="floating-card flex border-none justify-between px-5 p-2 rounded-t-[30px] right-0 w-[73.5%] bg-gray-100 gap-6 items-center h-[62px] ">
               <div className="text-xl font-semibold text-gray-900 h-full">Know More</div>
-              <FaArrowRight className="text-gray-500 text-md  -mt-3" />
+              <FaArrowRight className="text-gray-500 text-md  -mt-3 rotate-90" />
             </div>
             <div className="flex items-center border-none gap-4 h-24 px-[5px] rounded-tl-[32px] rounded-bl-[30px] bg-gray-100 ">
               <div className="flex -space-x-3 px-2">

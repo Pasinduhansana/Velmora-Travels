@@ -91,7 +91,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   whileHover={{ y: -3, scale: 1.1 }}
                   whileTap={{ scale: 0.95, y: 0 }}
-                  className={`relative w-8 h-8 rounded-full flex items-center justify-center transition-all shadow-[0_4px_10px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_15px_rgba(0,0,0,0.3)] bg-gradient-to-br ${gradient}`}
+                  className={`relative w-8 h-8 rounded-full opacity-80 hover:opacity-100 flex items-center justify-center transition-all  hover:shadow-[0_8px_15px_rgba(0,0,0,0.3)] bg-gradient-to-br ${gradient}`}
                   aria-label={social.label}
                 >
                   {/* Inner bevel/shine effect */}
