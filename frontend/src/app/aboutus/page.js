@@ -165,17 +165,22 @@ export default function AboutUsPage() {
             <h3 className="text-white text-xl sm:text-2xl font-bold mt-3 mb-4">{missionVision.mission.title}</h3>
             <p className="text-white/60 text-[14px] sm:text-[15px] leading-relaxed">{missionVision.mission.desc}</p>
           </motion.div>
-
-          {/* Vision */}
           <motion.div
             {...fadeRight(0.2)}
             className="relative border border-gray-100 rounded-[28px] sm:rounded-[32px] p-8 sm:p-10 overflow-hidden shadow-sm"
           >
-            <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-orange-100 opacity-60 translate-x-12 -translate-y-12" />
-            <div className="absolute bottom-0 left-0 w-32 h-32 rounded-full bg-yellow-50 -translate-x-8 translate-y-8" />
-            <span className="text-orange-500 text-xs tracking-[3px] uppercase font-semibold">{missionVision.vision.label}</span>
-            <h3 className="text-gray-900 text-xl sm:text-2xl font-bold mt-3 mb-4">{missionVision.vision.title}</h3>
-            <p className="text-gray-500 text-[14px] sm:text-[15px] leading-relaxed">{missionVision.vision.desc}</p>
+            {/* Background circles */}
+            <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-orange-100 opacity-60 translate-x-12 -translate-y-12 z-0" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 rounded-full bg-yellow-50 -translate-x-8 translate-y-8 z-0" />
+
+            {/* Content */}
+            <div className="relative z-10">
+              <span className="text-orange-500 text-xs tracking-[3px] uppercase font-semibold">{missionVision.vision.label}</span>
+
+              <h3 className="text-gray-900 text-xl sm:text-2xl font-bold mt-3 mb-4">{missionVision.vision.title}</h3>
+
+              <p className="text-gray-500 text-[14px] sm:text-[15px] leading-relaxed">{missionVision.vision.desc}</p>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -243,7 +248,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* ── 7. CTA BANNER ──────────────────────────────────────── */}
-      <CTABanner/>
+      <CTABanner />
 
       <Footer />
     </main>
