@@ -11,10 +11,10 @@ export const footerSections = [
   {
     title: "Further Information",
     links: [
-      { name: "Terms of use", href: "/legal#terms-of-use" },
-      { name: "Health & Safety", href: "/legal#health-safety" },
-      { name: "Privacy Policy", href: "/legal#privacy-policy" },
-      { name: "Booking Process", href: "/legal#booking-process" },
+      { name: "Terms of use", href: "/information#terms" },
+      { name: "Health & Safety", href: "/information#health-safety" },
+      { name: "Privacy Policy", href: "/information#privacy" },
+      { name: "Booking Process", href: "/information#booking" },
     ],
   },
   {
