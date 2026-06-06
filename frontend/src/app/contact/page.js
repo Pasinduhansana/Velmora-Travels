@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { FaArrowLeft, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp, FaClock, FaCheckCircle } from "react-icons/fa";
 
@@ -12,9 +13,11 @@ const fadeUp = (delay = 0) => ({
 });
 
 export default function ContactPage() {
+  const router = useRouter();
+
   return (
     <section className="bg-gray-50 min-h-screen py-12 sm:py-16 lg:py-10 px-4 sm:px-8 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto">
+      <div className="P-10 mx-auto">
         <div className="flex flex-row justify-between items-center">
           {/* Heading */}
           <motion.div {...fadeUp(0.1)} className="text-left mb-12">
@@ -36,12 +39,13 @@ export default function ContactPage() {
 
           {/* Back Button */}
           <motion.div {...fadeUp()}>
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 border py-2 px-4 rounded-full text-gray-600 hover:border-orange-500 hover:text-orange-500 transition-colors mb-8"
+            <button
+              onClick={() => router.back()}
+              className="inline-flex items-center gap-2 border py-2 px-4 rounded-full text-gray-600 hover:border-orange-300 hover:text-orange-500 transition-colors mb-8"
             >
-              <FaArrowLeft /> <span>Back to Home</span>
-            </Link>
+              <FaArrowLeft />
+              <span>Back to Page</span>
+            </button>
           </motion.div>
         </div>
 
@@ -98,7 +102,7 @@ export default function ContactPage() {
 
               <button
                 type="submit"
-                className="inline-flex items-center justify-center px-8 h-12 rounded-xl bg-gradient-to-r from-orange-400 to-orange-600 text-white font-semibold shadow-md hover:shadow-lg transition-all"
+                className="inline-flex items-center justify-center px-5 h-10 rounded-full bg-gradient-to-r from-orange-400 to-orange-600 text-white font-medium text-[15px] shadow-md hover:shadow-lg transition-all"
               >
                 Send Message
               </button>
@@ -154,7 +158,7 @@ export default function ContactPage() {
               href="https://wa.me/94771234567"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 flex items-center justify-center gap-3 h-12 rounded-xl bg-[#25D366] text-white font-semibold hover:opacity-90 transition"
+              className="mt-8 flex items-center justify-center gap-3 h-12 rounded-full bg-[#25D366] text-white font-medium text-[15px] hover:opacity-90 transition"
             >
               <FaWhatsapp className="text-lg" />
               Chat on WhatsApp
