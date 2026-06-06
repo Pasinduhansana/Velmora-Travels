@@ -167,7 +167,7 @@ function PackageCard({ pkg, index }) {
               tabIndex={-1}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="shrink-0 flex items-center gap-1.5 bg-gradient-to-r from-orange-400 to-orange-600 text-white text-[12px] font-semibold px-4 py-2 rounded-full cursor-pointer shadow-sm shadow-orange-200"
+              className="shrink-0 flex items-center gap-1.5 bg-gradient-to-r from-orange-400 to-orange-600 text-white text-[12px] font-semibold px-4 py-2 rounded-full cursor-pointer "
             >
               View Package <FaArrowRight className="text-[9px]" />
             </motion.span>
@@ -302,8 +302,8 @@ export default function PackagesPage() {
             <motion.div {...fadeUp(0.3)} className="shrink-0 flex flex-col items-center gap-4">
               <div className="text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-[20px] px-8 py-5">
                 <p className="text-white/60 text-xs mb-1">Starting From</p>
-                <p className="text-4xl font-bold text-white">$1,850</p>
-                <p className="text-white/50 text-xs mt-1">per person</p>
+                <p className="text-4xl font-bold text-white">Flexible</p>
+                <p className="text-white/50 text-xs mt-1">pricing Packages</p>
               </div>
               <Link href="/packages/heritage-scenic" className="w-full">
                 <motion.span

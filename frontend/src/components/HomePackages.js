@@ -111,11 +111,11 @@ export default function HomePackages() {
   const featured = packages.filter((p) => featuredPackageIds.includes(p.id));
 
   return (
-    <section className="py-10 sm:py-24 lg:py-0 lg:pb-10 px-4 sm:px-8 md:px-12 lg:px-20 bg-white overflow-hidden">
+    <section className="py-10 sm:py-24 lg:py-5 lg:pb-10 px-4 sm:px-8 md:px-12 lg:px-20 bg-white overflow-hidden">
       <div className=" mx-auto">
         {/* Heading */}
-        <motion.div {...fadeUp(0.05)} className="flex flex-col md:flex-row items-center md:items-center justify-between gap-5 mb-8 sm:mb-14">
-          <div className="text-center md:text-left">
+        <motion.div {...fadeUp(0.05)} className="flex flex-col md:flex-row items-center md:items-center justify-center gap-5 mb-8 sm:mb-14">
+          <div className="text-center mx-au">
             <span className="inline-flex items-center gap-2 text-[#FFD700] text-[11px] tracking-[4px] uppercase font-semibold">
               <span className="w-6 h-px bg-[#FFD700]" />
               {featuredPackagesMeta.label}
@@ -129,17 +129,6 @@ export default function HomePackages() {
             </h2>
             <p className="mt-3 text-gray-500 text-[14px] sm:text-[15px] max-w-lg leading-relaxed">{featuredPackagesMeta.subheading}</p>
           </div>
-
-          <Link href={featuredPackagesMeta.viewAllHref} aria-label="View all packages">
-            <motion.span
-              tabIndex={-1}
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.96 }}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-orange-400 text-orange-500 hover:bg-orange-50 font-semibold text-sm transition-colors cursor-pointer shrink-0"
-            >
-              {featuredPackagesMeta.viewAllLabel} <FaArrowRight className="text-xs" />
-            </motion.span>
-          </Link>
         </motion.div>
 
         {/* Cards grid */}
