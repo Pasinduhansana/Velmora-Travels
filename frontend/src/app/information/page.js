@@ -38,7 +38,7 @@ export default function InformationPage() {
           <motion.div {...fadeUp()}>
             <button
               onClick={() => router.back()}
-              className="hidden md:inline-flex items-center gap-2 border py-2 px-4 rounded-full text-gray-600 hover:border-orange-300 hover:text-orange-500 transition-colors mb-8"
+              className="hidden min-w-[160px] md:inline-flex items-center gap-2 border py-2 px-4 rounded-full text-gray-600 hover:border-orange-300 hover:text-orange-500 transition-colors mb-8"
             >
               <FaArrowLeft />
               <span>Back to Page</span>
@@ -57,14 +57,14 @@ export default function InformationPage() {
               Important Travel <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Information</span>
             </h1>
 
-            <p className="mt-4 max-w-2xl  text-gray-500 text-[15px] leading-relaxed">
+            <p className="mt-4 md:max-w-sm lg:max-w-2xl  text-gray-500 text-[15px] leading-relaxed">
               Please review the following information before booking your Sri Lankan adventure. These guidelines help ensure a safe, enjoyable, and
               transparent travel experience.
             </p>
           </motion.div>
         </div>
 
-        <div className="grid md:grid-cols-[280px_1fr] gap-0 md:gap-8 bg-white rounded-[26px] overflow-hidden">
+        <div className="grid lg:grid-cols-[280px_1fr] gap-0 md:gap-8 bg-white rounded-[26px] overflow-hidden">
           {/* Sidebar */}
           <motion.div {...fadeUp(0.2)} className="bg-white  m-0 p-5 md:m-5 h-fit md:sticky top-0 md:top-6">
             <div className="space-y-2">
@@ -79,7 +79,7 @@ export default function InformationPage() {
                       block: "start",
                     });
                   }}
-                  className={`w-full text-center md:text-left md:px-4 md:py-3 py-2 rounded-full transition-all font-medium ${
+                  className={`w-full text-center border lg:text-left md:px-4 md:py-3 py-2 rounded-full transition-all font-medium ${
                     active === section.id ? "bg-gradient-to-r from-orange-400 to-orange-600 text-white" : "text-gray-600 hover:bg-orange-50"
                   }`}
                 >
@@ -90,7 +90,7 @@ export default function InformationPage() {
           </motion.div>
 
           {/* Content */}
-          <div className="space-y-1 md:space-y-5">
+          <div className="space-y-1 lg:space-y-5">
             {informationSections.map((section, index) => (
               <motion.div key={section.id} id={section.id} {...fadeUp(index * 0.1)} className="p-7 sm:p-9 ">
                 {/*Horizontal Seperator */}
