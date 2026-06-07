@@ -128,14 +128,15 @@ export default function Header() {
               );
             })}
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 text-lg font-semibold rounded-full shadow-lg bg-black text-white hover:bg-gray-900 mt-4"
-              onClick={() => setIsOpen(false)}
-            >
-              Book Now
-            </motion.button>
+            <Link href="/contact" onClick={() => setIsOpen(false)}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 text-lg font-semibold rounded-full shadow-lg bg-black text-white hover:bg-gray-900 mt-4 cursor-pointer"
+              >
+                Book Now
+              </motion.div>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
