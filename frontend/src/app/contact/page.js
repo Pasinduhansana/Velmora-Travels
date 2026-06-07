@@ -20,18 +20,18 @@ export default function ContactPage() {
       <div className="P-10 mx-auto">
         <div className="flex flex-row justify-between items-center">
           {/* Heading */}
-          <motion.div {...fadeUp(0.1)} className="text-left mb-12">
+          <motion.div {...fadeUp(0.1)} className="text-center md:text-left mb-12">
             <span className="inline-flex items-center gap-2 text-[#FFD700] text-[11px] tracking-[4px] uppercase font-semibold">
               <span className="w-6 h-px bg-[#FFD700]" />
               Contact Us
               <span className="w-6 h-px bg-[#FFD700]" />
             </span>
 
-            <h1 className="mt-3 text-3xl sm:text-4xl md:text-[46px] font-bold text-gray-900 tracking-tight leading-tight">
+            <h1 className="mt-3 text-3xl sm:text-4xl md:text-[46px] md:max-w-md lg:max-w-3xl font-bold text-gray-900 tracking-tight leading-tight">
               Let’s Plan Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Journey</span>
             </h1>
 
-            <p className="mt-5 text-gray-500 text-[15px] max-w-2xl  leading-relaxed">
+            <p className="mt-5 text-gray-500 text-[15px] md:max-w-md lg:max-w-2xl  leading-relaxed">
               Whether you're planning a holiday escape, adventure tour, or cultural journey, we help you create unforgettable travel experiences
               tailored just for you. Reach out to discuss your travel plans, request a quote, or start planning your perfect trip.
             </p>
@@ -41,7 +41,7 @@ export default function ContactPage() {
           <motion.div {...fadeUp()}>
             <button
               onClick={() => router.back()}
-              className="inline-flex items-center gap-2 border py-2 px-4 rounded-full text-gray-600 hover:border-orange-300 hover:text-orange-500 transition-colors mb-8"
+              className=" hidden md:inline-flex min-w-[160px] items-center gap-2 border py-2 px-4 rounded-full text-gray-600 hover:border-orange-300 hover:text-orange-500 transition-colors mb-8"
             >
               <FaArrowLeft />
               <span>Back to Page</span>
@@ -52,10 +52,10 @@ export default function ContactPage() {
         {/* Main Content */}
         <motion.div {...fadeUp(0.15)} className="bg-white grid lg:grid-cols-[1.4fr_0.9fr] gap-5 rounded-[26px] p-7 sm:p-9  border border-gray-100">
           {/* Contact Form */}
-          <div className="flex flex-col pr-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Send Us a Message</h2>
+          <div className="flex flex-col lg:pr-10">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center md:text-left">Send Us a Message</h2>
 
-            <p className="text-gray-500 text-sm mb-8">
+            <p className="text-gray-500 text-sm mb-8 text-center md:text-left">
               Tell us about your travel plans and we’ll get back to you shortly with the best options for your journey.
             </p>
 
@@ -66,7 +66,7 @@ export default function ContactPage() {
                 <input
                   type="text"
                   placeholder="John Doe"
-                  className="w-full h-12 px-4 rounded-xl border border-gray-200 focus:border-orange-500 outline-none transition-colors"
+                  className="w-full h-10 px-4 rounded-xl border border-gray-200 focus:border-orange-500 outline-none transition-colors"
                 />
               </div>
 
@@ -76,7 +76,7 @@ export default function ContactPage() {
                 <input
                   type="email"
                   placeholder="john@example.com"
-                  className="w-full h-12 px-4 rounded-xl border border-gray-200 focus:border-orange-500 outline-none transition-colors"
+                  className="w-full h-10 px-4 rounded-xl border border-gray-200 focus:border-orange-500 outline-none transition-colors"
                 />
               </div>
 
@@ -86,7 +86,7 @@ export default function ContactPage() {
                 <input
                   type="text"
                   placeholder="Tour Inquiry"
-                  className="w-full h-12 px-4 rounded-xl border border-gray-200 focus:border-orange-500 outline-none transition-colors"
+                  className="w-full h-10 px-4 rounded-xl border border-gray-200 focus:border-orange-500 outline-none transition-colors"
                 />
               </div>
 
@@ -102,7 +102,7 @@ export default function ContactPage() {
 
               <button
                 type="submit"
-                className="inline-flex items-center justify-center px-5 h-10 rounded-full bg-gradient-to-r from-orange-400 to-orange-600 text-white font-medium text-[15px] shadow-md hover:shadow-lg transition-all"
+                className="inline-flex w-full items-center justify-center px-5 h-10 rounded-full bg-gradient-to-r from-orange-400 to-orange-600 text-white font-medium text-[15px] shadow-md hover:shadow-lg transition-all"
               >
                 Send Message
               </button>
@@ -110,10 +110,10 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Information */}
-          <div className="flex flex-col">
-            <h3 className="text-2xl font-bold text-gray-900 mb-3">Contact Information</h3>
+          <div className="flex flex-col mt-6 lg:mt-0">
+            <h3 className="text-2xl font-bold text-gray-900 mb-3 text-center md:text-left">Contact Information</h3>
 
-            <p className="text-gray-500 text-sm leading-relaxed mb-8">
+            <p className="text-gray-500 text-sm leading-relaxed mb-8 text-center md:text-left">
               Looking for your next unforgettable adventure? We help travelers discover breathtaking destinations, unique experiences, and carefully
               curated tours designed to create lasting memories. Let us make your journey smooth, exciting, and stress-free.
             </p>
@@ -158,7 +158,7 @@ export default function ContactPage() {
               href="https://wa.me/94771234567"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 flex items-center justify-center gap-3 h-12 rounded-full bg-[#25D366] text-white font-medium text-[15px] hover:opacity-90 transition"
+              className="mt-8 flex items-center justify-center gap-3 h-10 select-none lg:h-12 rounded-full bg-[#25D366] text-white font-medium text-[15px] hover:opacity-90 transition"
             >
               <FaWhatsapp className="text-lg" />
               Chat on WhatsApp
