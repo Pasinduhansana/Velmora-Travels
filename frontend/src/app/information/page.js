@@ -38,7 +38,7 @@ export default function InformationPage() {
           <motion.div {...fadeUp()}>
             <button
               onClick={() => router.back()}
-              className="inline-flex items-center gap-2 border py-2 px-4 rounded-full text-gray-600 hover:border-orange-300 hover:text-orange-500 transition-colors mb-8"
+              className="hidden md:inline-flex items-center gap-2 border py-2 px-4 rounded-full text-gray-600 hover:border-orange-300 hover:text-orange-500 transition-colors mb-8"
             >
               <FaArrowLeft />
               <span>Back to Page</span>
@@ -46,7 +46,7 @@ export default function InformationPage() {
           </motion.div>
 
           {/* Heading */}
-          <motion.div {...fadeUp(0.1)} className="text-left mb-12">
+          <motion.div {...fadeUp(0.1)} className="text-center md:text-left mb-12">
             <span className="inline-flex items-center gap-2 text-[#FFD700] text-[11px] tracking-[4px] uppercase font-semibold">
               <span className="w-6 h-px bg-[#FFD700]" />
               Information Centre
@@ -63,9 +63,10 @@ export default function InformationPage() {
             </p>
           </motion.div>
         </div>
-        <div className="grid lg:grid-cols-[280px_1fr] gap-8 bg-white rounded-[26px]">
+
+        <div className="grid md:grid-cols-[280px_1fr] gap-0 md:gap-8 bg-white rounded-[26px] overflow-hidden">
           {/* Sidebar */}
-          <motion.div {...fadeUp(0.2)} className="bg-white  m-5 p-5 h-fit sticky top-6">
+          <motion.div {...fadeUp(0.2)} className="bg-white  m-0 p-5 md:m-5 h-fit md:sticky top-0 md:top-6">
             <div className="space-y-2">
               {informationSections.map((section) => (
                 <button
@@ -78,7 +79,7 @@ export default function InformationPage() {
                       block: "start",
                     });
                   }}
-                  className={`w-full text-left px-4 py-3 rounded-xl transition-all font-medium ${
+                  className={`w-full text-center md:text-left md:px-4 md:py-3 py-2 rounded-full transition-all font-medium ${
                     active === section.id ? "bg-gradient-to-r from-orange-400 to-orange-600 text-white" : "text-gray-600 hover:bg-orange-50"
                   }`}
                 >
@@ -89,12 +90,12 @@ export default function InformationPage() {
           </motion.div>
 
           {/* Content */}
-          <div className="space-y-5">
+          <div className="space-y-1 md:space-y-5">
             {informationSections.map((section, index) => (
               <motion.div key={section.id} id={section.id} {...fadeUp(index * 0.1)} className="p-7 sm:p-9 ">
                 {/*Horizontal Seperator */}
                 {index > 0 && <div className="w-full h-px bg-gray-200 mb-10" />}
-                <h2 className="text-2xl font-bold text-gray-900 mb-5">{section.title}</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-5 text-center md:text-left">{section.title}</h2>
 
                 <div className="space-y-4">
                   {section.content.map((item, i) => (
